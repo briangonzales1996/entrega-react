@@ -7,7 +7,9 @@ export const ItemListContainer = ({text}) => {
                 <h3>Productos tecnologicos para tu hogar</h3>
                 <h1>Tenemos descuentos y nuevas ofertas cada semana</h1>
                 <button>{text}</button>
+                
             </div>
     </section>
+    
   )
 }
