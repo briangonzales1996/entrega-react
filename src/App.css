@@ -1,0 +1,330 @@
+
+
+
+
+#root{
+
+} 
+
+  *{
+    margin: 0;
+    padding: 0;
+    --color-font:#1C2F73;
+    --color-claro:#A5B2E1;
+    --color-principal:white;
+    --font-familia:'Courier New', Courier, monospace;
+    --color-feedback:#D9D9D9;
+    box-sizing: border-box;
+}
+
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.382),rgba(0, 0, 0, 0.366)), url(../public/assets/fondo.jpg);
+    padding: 10px 30px ;
+}
+
+.container-main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--color-principal);
+    font-family: var(--font-familia);
+}
+.container-main>.logo{
+    width: 70px;
+    height: 70ppx;
+}
+.container-main>.logo>img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.container-main>.categorias{
+    display: flex;
+    align-items: center;
+}
+
+.container-main>.categorias>ul{
+    display: flex;
+    list-style-type: none;
+    font-size: 1.3rem;
+    gap: 40px;
+    font-weight: 500;
+}
+.container-main>.categorias>ul>li{
+    padding: 10px 20px;
+    
+}
+.container-main>.categorias>ul>li>a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+/*logo carrito */
+.container-main>.categorias>.carrito-burbuja{
+    margin-left: 20px;
+}
+
+.container-main>.categorias>.carrito-burbuja>i{
+    font-size: 1.8rem;
+}
+
+.container-main>.categorias>.carrito-burbuja>span{
+    background-color: rgb(33, 15, 49);
+    padding: 3px;
+    border-radius: 50%;
+    
+}
+
+
+
+
+
+/*Fondo principal*/
+.background-principal{
+    color: var(--color-principal);
+    font-family: 'Courier New', Courier, monospace;
+
+}   
+
+.background-principal>div{
+    font-size: 1.6rem;
+    max-width: 600px;
+    padding: 140px 0;
+    margin-left: 200px;
+    
+}
+
+.background-principal>div>h3{
+    font-size: 1.2rem;
+}
+.background-principal>div>h1{
+    margin-top: 20px;
+}
+
+.background-principal>div>button{
+    margin-top: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: 700;
+    background-color: #132D70;
+    color: var(--color-principal);
+    border: none;
+}
+
+
+
+
+/*List of products available*/
+.products-list{
+
+}
+.products-list>div{
+    background-color: var(--color-principal);
+    padding-top: 3rem;
+    font-family: var(--font-familia);
+}
+
+.products-list>div>h1{
+    text-align: center;
+    color: var(--color-font);
+}
+
+.products-list>div>.items-container{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(min(250px,100%),1fr));
+    
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 3rem;
+    
+}
+
+.products-list>div>.items-container>article{
+    background-color: #CCCFD7;
+    color: var(--color-font);
+    padding-bottom: 20px;
+    transition: transform .5s ease;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+.products-list>div>.items-container>article:hover{
+    transform: scale(1.1);
+}
+
+.products-list>div>.items-container>article>.item-img{
+    margin-bottom: 4px;
+    width: 100%;
+    
+    
+}
+
+.products-list>div>.items-container>article>.item-img>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*description del product*/
+.products-list>div>.items-container>article>.item-description{
+    padding: 0 10px;
+
+}
+.products-list>div>.items-container>article>.item-description>h3{
+    font-size: 1.4rem;
+}
+.products-list>div>.items-container>article>.item-description>p{
+    font-size: .9rem;
+}
+
+/*precio of product*/
+
+.products-list>div>.items-container>article>.item-precio{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+
+}
+.products-list>div>.items-container>article>.item-precio>p{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.products-list>div>.items-container>article>.item-precio>button{
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: none;
+    color: var(--color-font);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .5s ease;
+
+}
+
+.products-list>div>.items-container>article>.item-precio>button:hover{
+    background-color: rgb(104, 7, 7);
+    color: #CCCFD7;
+}
+
+.products-list>div>.items-container>article>.item-precio>button>a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+/*item styles------------*/
+
+.item-container{
+    background-color: #CCCFD7;
+    color: var(--color-font);
+    padding-bottom: 20px;
+    transition: transform .5s ease;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 300px;
+    margin: 20px auto;
+    
+    
+}
+
+.item-container:hover{
+    transform: scale(1.1);
+}
+
+.item-container>.item-img{
+    margin-bottom: 4px;
+    width: 100%;
+}
+
+.item-container>.item-img>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-container>.item-description{
+    padding: 0 10px;
+}
+
+.item-container>.item-description>h3{
+    font-size: 1.4rem;
+}
+.item-container>.item-description>p{
+    font-size: .9rem;
+}
+
+/*precio of product*/
+
+.item-container>.item-precio{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+
+}
+.item-container>.item-precio>p{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.item-container>.item-precio>button{
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: none;
+    color: var(--color-font);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .5s ease;
+
+}
+
+.item-container>.item-precio>button:hover{
+    background-color: rgb(104, 7, 7);
+    color: #CCCFD7;
+}
+
+.item-container>.item-precio>button>a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.item-container>.item-contador{
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+    margin-top: 5px;
+    align-items: center;
+}
+.item-container>.item-contador>button{
+    padding: 2px 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 20px;
+    
+
+}
+.item-container>.item-contador>span{
+    font-size: 1.2rem;
+
+}
+.item-container>.item-contador>button:hover{
+    background-color: rgb(104, 7, 7);
+    color: #CCCFD7;
+    transition: all .5s ease;
+    
+    cursor: pointer;
+}
