@@ -10,9 +10,9 @@ export const ItemList = ({ products }) => {
                     <div className="items-container">
                         {
                             products.map((item) => {
-                                const { title, id,price,description,images } = item;
+                                const { title, id,price,description,image } = item;
                                 
-                                return (<Item key={id} id={id} title={title} precio={price} descripcion={description} img={images[0]}></Item>)
+                                return (<Item key={id} id={id} title={title} precio={price} descripcion={description} img={image}></Item>)
                             })
                         }
                     </div>

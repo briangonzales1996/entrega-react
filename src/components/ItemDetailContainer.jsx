@@ -16,7 +16,7 @@ export const ItemDetailContainer = () => {
 
     const obtenerProductos = async () => {
         
-        const   url = "https://dummyjson.com/products/" + parametro.id; 
+        const   url = "https://fakestoreapi.com/products/" + parametro.id; 
         console.log(url)
         const options = {
             method: 'GET',
@@ -39,7 +39,7 @@ console.log(productos)
 
     return (
         <>
-            {loading?<ItemDetail productos ={productos}></ItemDetail>:<div>CARGANDOOOO</div>}
+            {loading?<ItemDetail productos ={productos}></ItemDetail>:<div className='cargando'>CARGANDO</div>}
         </>
         
     )

@@ -15,9 +15,9 @@ export const ItemListContainer = () => {
     // 'https://dummyjson.com/products/category/smartphones'
     let url = "";
     Object.keys(parametro).length >= 1?
-    url = "https://dummyjson.com/products/category/" + parametro.id:
-    url = 'https://dummyjson.com/products';
-    
+    url = "https://fakestoreapi.com/products/category/" + parametro.id:
+    //url = 'https://dummyjson.com/products';
+    url = "https://fakestoreapi.com/products"
     const options = {
       method: 'GET',
       headers: {
@@ -28,7 +28,7 @@ export const ItemListContainer = () => {
     try {
       const response = await fetch(url, options);
       const result = await response.json();
-      setProductos(result.products);
+      setProductos(result);
       setLoading(true)
     } catch (error) {
       console.error(error);
@@ -41,7 +41,7 @@ export const ItemListContainer = () => {
   return (
     <>
       {loading ? <ItemList products={productos} /> :
-        <div>CARGANDO CONTENIDO</div>
+        <div className='cargando'>CARGANDO CONTENIDO</div>
       }
     </>
   )

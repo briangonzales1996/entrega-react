@@ -11,7 +11,7 @@ export const ItemDetail = ({ productos }) => {
         <>
             <article className='item-container'>
                 <div className="item-img">
-                    <img loading="lazy" src={"https://pm1.aminoapps.com/6796/55d504be3ff4187b037e349dde1167579579028bv2_00.jpg"} alt="" />
+                    <img loading="lazy" src={productos.image} alt="" />
                 </div>
                 <div className="item-description">
                     <h3 >Producto {productos.title}</h3>
