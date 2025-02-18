@@ -16,7 +16,7 @@ export const Item = ({ title,precio,descripcion,img,id }) => {
                 </div>
                 <div className="item-precio">
                     <p>Pr ${precio}</p>
-                    <button><Link to={"/product/"+id}>BUY</Link></button>
+                    <Link to={"/product/"+id}><button>BUY</button></Link>
                 </div>
             </article>
         </>
