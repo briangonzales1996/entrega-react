@@ -1,13 +1,8 @@
 import React from 'react'
 import { ItemCount } from './ItemCount'
-import { useState } from 'react'
 
-export const ItemDetail = ({ productos }) => {
-    
+export const ItemDetail = ({ productos }) => {  
     return (
-
-
-
         <>
             <article className='item-container'>
                 <div className="item-img">
@@ -24,7 +19,5 @@ export const ItemDetail = ({ productos }) => {
             </article>
             
         </>
-
-
     )
 }

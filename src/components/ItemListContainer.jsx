@@ -6,18 +6,21 @@ export const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
   const parametro = useParams();
   const [loading, setLoading] = useState(false);
-
+  
   useEffect(() => {
     obtenerProductos()
-  }, [parametro])
+  }, [parametro.id])
+  
 
   const obtenerProductos = async () => {
+    
     // 'https://dummyjson.com/products/category/smartphones'
     let url = "";
     Object.keys(parametro).length >= 1?
     url = "https://fakestoreapi.com/products/category/" + parametro.id:
     //url = 'https://dummyjson.com/products';
     url = "https://fakestoreapi.com/products"
+    
     const options = {
       method: 'GET',
       headers: {
@@ -25,11 +28,14 @@ export const ItemListContainer = () => {
         'x-rapidapi-host': 'mercado-libre7.p.rapidapi.com'
       }
     };
+    
     try {
       const response = await fetch(url, options);
       const result = await response.json();
+      
       setProductos(result);
-      setLoading(true)
+      setLoading(true);
+      
     } catch (error) {
       console.error(error);
     }

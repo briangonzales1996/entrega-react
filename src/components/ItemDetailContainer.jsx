@@ -5,14 +5,14 @@ import { useParams } from 'react-router';
 
 
 export const ItemDetailContainer = () => {
-
+    
     const [productos,setProductos]= useState({})
     const [loading, setLoading] = useState(false);
 
     const parametro = useParams();
     useEffect(() => {
         obtenerProductos()
-    }, [parametro])
+    }, [parametro.id])
 
     const obtenerProductos = async () => {
         
@@ -28,7 +28,7 @@ export const ItemDetailContainer = () => {
         try {
             const response = await fetch(url, options);
             const result = await response.json();
-            
+            console.log(result)
             setProductos(result);
             setLoading(true)
         } catch (error) {

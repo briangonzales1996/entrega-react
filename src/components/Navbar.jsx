@@ -1,12 +1,10 @@
 import React from 'react'
-import { CardWidger } from './CardWidger'
+import { CartWidger } from './CartWidger'
 import { NavLink } from 'react-router'
+
 export const Navbar = () => {
   return (
-
-
     <header>
-
       <div className="container-main">
         <div className="logo">
           <NavLink to={"/"}><img src="../public/assets/logo.png" alt="logo de windows" /></NavLink>
@@ -20,10 +18,9 @@ export const Navbar = () => {
             <li><NavLink to="/category/jewelery">ACCESSORIES</NavLink></li>
             
           </ul>
-          <CardWidger cantidad='10'></CardWidger>
+          <CartWidger cantidad='10'></CartWidger>
         </nav>
       </div>
-
       <section className="background-principal">
         <div>
           <h3>Productos tecnologicos para tu hogar</h3>
@@ -31,11 +28,6 @@ export const Navbar = () => {
           <button>proximamente</button>
         </div>
       </section>
-
-
     </header>
-
-
-
   )
 }
