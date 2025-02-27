@@ -7,7 +7,7 @@ export const Navbar = () => {
     <header>
       <div className="container-main">
         <div className="logo">
-          <NavLink to={"/"}><img src="../public/assets/logo.png" alt="logo de windows" /></NavLink>
+          <NavLink to={"/"}><img  src="../public/assets/logo.png" alt="logo de windows" /></NavLink>
         </div>
         <nav className="categorias">
           <ul>

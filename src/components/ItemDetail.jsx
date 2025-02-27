@@ -1,7 +1,9 @@
-import React from 'react'
 import { ItemCount } from './ItemCount'
 
-export const ItemDetail = ({ productos }) => {  
+
+export const ItemDetail = ({ productos }) => {
+    
+
     return (
         <>
             <article className='item-container'>
@@ -15,7 +17,8 @@ export const ItemDetail = ({ productos }) => {
                 <div className="item-precio">
                     <p>Pr ${productos.price}</p>
                 </div>
-                <ItemCount></ItemCount>
+                <ItemCount producto={productos}></ItemCount>
+                
             </article>
             
         </>

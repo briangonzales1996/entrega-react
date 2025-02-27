@@ -26,10 +26,13 @@ header{
     font-family: var(--font-familia);
 }
 .container-main>.logo{
-    width: 70px;
-    height: 70ppx;
+    width: 100px;
+    height: 100px;
 }
-.container-main>.logo>img{
+.container-main>.logo>a{
+    
+}
+.container-main>.logo>a>img{
     width: 100%;
     height: 100%;
 }
