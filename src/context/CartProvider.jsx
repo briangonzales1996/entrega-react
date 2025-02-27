@@ -36,14 +36,29 @@ export const CartProvider = ({ children }) => {
 
     const getTotal = () => {
         const total = cart.map((product) => {
+            
             return product.quantity * product.price
         })
         const result = total.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
         return result
     }
 
+
+    const addInputCart= (e,id)=>{
+        let valor = e.target.value;
+        valor = parseInt(valor)
+        const cartNuevo = [...cart].map((item)=>{
+            if(id==item.id)item.quantity=valor;
+            return item
+        })
+        setCard(cartNuevo)
+        
+    }
+
+
+
     return (
-        <CartContext.Provider value={{ addToCart, cart, getQuantity, getTotal }}>
+        <CartContext.Provider value={{ addToCart, cart, getQuantity, getTotal,addInputCart }}>
             {children}
         </CartContext.Provider>
     )
