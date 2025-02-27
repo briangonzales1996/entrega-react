@@ -1,27 +1,50 @@
 import { useState } from "react"
 import { CartContext } from "./CartContext"
 
-export const CartProvider = ({children})=>{
-    const [cart,setCard] = useState([]);
-    
+export const CartProvider = ({ children }) => {
+    const [cart, setCard] = useState([]);
 
-    const addToCart=(producto,count)=>{
-        producto = {...producto,quantity:count}
-        setCard([...cart,producto]);
-        
+    function verificarProductoExistente(producto) {
+        const ids = [...cart].map((product) => product.id);       
+        const condicion = ids.includes(producto.id)
+        return condicion
     }
-    const getQuantity=  ()=>{
-        const quantities = cart.map((item)=>(
+
+    const addToCart = (producto, count) => {
+        const condicion = verificarProductoExistente(producto);
+        if (condicion) {
+            const quantityMod = [...cart].map((item) => {
+                if (item.id == producto.id) item.quantity += count
+                return item
+            })
+            setCard(quantityMod)
+        }
+        else {
+            producto = { ...producto, quantity: count }
+            setCard([...cart, producto]);
+        }
+    }
+    
+    const getQuantity = () => {
+        const quantities = cart.map((item) => (
             item.quantity
-          ))
-          const result = quantities.reduce((accumulator,currentValue)=>accumulator+currentValue,0);
-          return result
+        ))
+        const result = quantities.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        return result
     }
-    
 
-return(
-    <CartContext.Provider value={{addToCart,cart,getQuantity}}>
-        {children}
-    </CartContext.Provider>
-)   
+
+    const getTotal = () => {
+        const total = cart.map((product) => {
+            return product.quantity * product.price
+        })
+        const result = total.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        return result
+    }
+
+    return (
+        <CartContext.Provider value={{ addToCart, cart, getQuantity, getTotal }}>
+            {children}
+        </CartContext.Provider>
+    )
 } 
