@@ -1,11 +1,12 @@
 import { useState } from "react"
 import { CartContext } from "./CartContext"
+import { getProducts } from "../firebase/db";
 
 export const CartProvider = ({ children }) => {
     const [cart, setCard] = useState([]);
 
     function verificarProductoExistente(producto) {
-        const ids = [...cart].map((product) => product.id);       
+        const ids = [...cart].map((product) => product.id);
         const condicion = ids.includes(producto.id)
         return condicion
     }
@@ -24,7 +25,7 @@ export const CartProvider = ({ children }) => {
             setCard([...cart, producto]);
         }
     }
-    
+
     const getQuantity = () => {
         const quantities = cart.map((item) => (
             item.quantity
@@ -33,32 +34,28 @@ export const CartProvider = ({ children }) => {
         return result
     }
 
-
     const getTotal = () => {
         const total = cart.map((product) => {
-            
+
             return product.quantity * product.price
         })
         const result = total.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
         return result
     }
 
-
-    const addInputCart= (e,id)=>{
+    const addInputCart = (e, id) => {
         let valor = e.target.value;
         valor = parseInt(valor)
-        const cartNuevo = [...cart].map((item)=>{
-            if(id==item.id)item.quantity=valor;
+        const cartNuevo = [...cart].map((item) => {
+            if (id == item.id) item.quantity = valor;
             return item
         })
         setCard(cartNuevo)
-        
+
     }
-
-
-
+    getProducts()
     return (
-        <CartContext.Provider value={{ addToCart, cart, getQuantity, getTotal,addInputCart }}>
+        <CartContext.Provider value={{ addToCart, cart, getQuantity, getTotal, addInputCart }}>
             {children}
         </CartContext.Provider>
     )

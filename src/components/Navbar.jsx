@@ -11,11 +11,11 @@ export const Navbar = () => {
         </div>
         <nav className="categorias">
           <ul>
-            <li><NavLink to="/category/jewelery">MOTOR</NavLink></li>
-            <li><NavLink to="/category/electronics">TABLETS</NavLink></li>
-            <li><NavLink to="/category/men's clothing">MOVILES</NavLink></li>
-            <li><NavLink to="/category/women's clothing">NOTEBOOK</NavLink></li>
-            <li><NavLink to="/category/jewelery">ACCESSORIES</NavLink></li>
+            <li><NavLink to="/category/pc">PC</NavLink></li>
+            <li><NavLink to="/category/tablet">TABLETS</NavLink></li>
+            <li><NavLink to="/category/movile">MOVILES</NavLink></li>
+            <li><NavLink to="/category/notebook">NOTEBOOK</NavLink></li>
+            <li><NavLink to="/category/accessory">ACCESSORIES</NavLink></li>
             
           </ul>
           <CartWidger cantidad='10'></CartWidger>

@@ -14,6 +14,7 @@
 header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.382), rgba(0, 0, 0, 0.366)), url(../public/assets/fondo.jpg);
     padding: 10px 30px;
+ 
 }
 
 .container-main {
@@ -148,7 +149,7 @@ header {
 
 .products-list>div>.items-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
     gap: 30px;
     max-width: 1200px;
     margin: auto;
@@ -558,6 +559,88 @@ header {
     
 }
 
+/*formulario*/
+.form-container{
+    min-height: 550px;
+    background-color: var(--color-font);
+    color: var(--color-feedback);
+}
+.form-container>h1{
+    padding-top: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: var(--font-familia);
+}
+.form-container>form{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+}
+.form-container>form>.barra-container{
+
+}
+
+.form-container>form>.barra-container>.barra{
+    
+    
+    min-height: 15px;
+    transition: all 500ms ease;
+}
+/*
+.form-container>form>.barra-container>.barra1{
+    background-color: rgb(125, 191, 26);
+    min-height: 15px;
+    animation: formBarra1 1s linear both;
+}   
+
+.form-container>form>.barra-container>.barra2{
+    background-color: rgb(125, 191, 26);
+    min-height: 15px;
+    animation: formBarra2 1s linear both;
+}
+.form-container>form>.barra-container>.barra3{
+    background-color: rgb(125, 191, 26);
+    min-height: 15px;
+    animation: formBarra3 1s linear both;
+}
+.form-container>form>.barra-container>.barra4{
+    background-color: rgb(125, 191, 26);
+    min-height: 15px;
+    animation: formBarra4 1s linear both;
+}
+*/
+
+.form-container>form>label{
+    margin-top: 18px;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.form-container>form>input{
+    padding:  7px 5px;
+    font-size: 1.1rem;
+    
+    
+}
+.form-container>form>input[type="date"]{
+    max-width: 50%;
+}
+.form-container>form>input[type="submit"]{
+    margin-top: 18px;
+    background-color: var(--color-claro);
+    border: none;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+.form-container>form>input[type="submit"]:hover{
+    background-color: rgb(104, 7, 7);
+    color: var(--color-feedback);
+}
+
+
+
 
 
 
@@ -664,3 +747,56 @@ header {
         opacity: 1;
     }
 }
+
+@keyframes formBarra0 {
+    from{
+        width: 5%;
+    }
+
+    to{
+        width: 5%;
+    }
+}
+
+@keyframes formBarra1 {
+    from{
+        width: 5%;
+    }
+
+    to{
+        width: 25%;
+    }
+}
+
+
+@keyframes formBarra2 {
+    from{
+        width: 25%;
+    }
+
+    to{
+        width: 50%;
+    }
+}
+
+
+@keyframes formBarra3 {
+    from{
+        width: 50%;
+    }
+
+    to{
+        width: 75%;
+    }
+}
+
+@keyframes formBarra4 {
+    from{
+        width: 75%;
+    }
+
+    to{
+        width: 100%;
+    }
+}
+

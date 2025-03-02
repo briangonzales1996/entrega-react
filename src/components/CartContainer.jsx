@@ -2,11 +2,12 @@ import React, { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
 import { Link } from 'react-router';
 import { CartList } from './CartList';
+import { useNavigate } from 'react-router';
 
 export const CartContainer = () => {
   const {cart,getTotal} = useContext(CartContext);
   const total = getTotal();
-
+  const navigate = useNavigate()
 
   return (
     <div className='carrito-container'>
@@ -36,12 +37,12 @@ export const CartContainer = () => {
             <h2>Total</h2>
             <p>${total}</p>
           </div>
-          <button >Comprar Todo</button>
+          <button onClick={(e)=>navigate("/checkout")} >Comprar Todo</button>
         </div>
       }
       <div className='carrito-back'>
         <Link to={'/'}>
-          <h2>VOLVER A LISTA DE PRODUCTOS</h2>
+          <h2 onClick={(e)=>navigate("/")}>VOLVER A LISTA DE PRODUCTOS</h2>
         </Link>
       </div>
     </div>

@@ -1,14 +1,12 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
 
-export const CartList = ({cart}) => {
-    const {addInputCart} = useContext(CartContext);
+export const CartList = ({ cart }) => {
+    const { addInputCart } = useContext(CartContext);
 
-
-    const handleAddInput=(e,id)=>{
-        addInputCart(e,id)
+    const handleAddInput = (e, id) => {
+        addInputCart(e, id)
     }
-
 
     return (
         <section>
@@ -27,8 +25,8 @@ export const CartList = ({cart}) => {
                                 </div>
                                 <div className='list-product-precio'>
                                     <h4>${item.price}</h4>
-                                    <input defaultValue={item.quantity} onChange={(e)=>handleAddInput(e,item.id)} type="number" min={1} max={20} />
-                                    <h4>${(item.quantity * item.price).toFixed(2)}</h4>
+                                    <input defaultValue={item.quantity} onChange={(e) => handleAddInput(e, item.id)} type="number" min={1} max={20} />
+                                    <h4>${(item.quantity * item.price)}</h4>
                                 </div>
                             </article>
                         )
