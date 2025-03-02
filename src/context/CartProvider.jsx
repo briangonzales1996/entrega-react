@@ -3,7 +3,7 @@ import { CartContext } from "./CartContext"
 import { getProducts } from "../firebase/db";
 
 export const CartProvider = ({ children }) => {
-    const [cart, setCard] = useState([]);
+    const [cart, setCart] = useState([]);
 
     function verificarProductoExistente(producto) {
         const ids = [...cart].map((product) => product.id);
@@ -18,11 +18,11 @@ export const CartProvider = ({ children }) => {
                 if (item.id == producto.id) item.quantity += count
                 return item
             })
-            setCard(quantityMod)
+            setCart(quantityMod)
         }
         else {
             producto = { ...producto, quantity: count }
-            setCard([...cart, producto]);
+            setCart([...cart, producto]);
         }
     }
 
@@ -50,12 +50,12 @@ export const CartProvider = ({ children }) => {
             if (id == item.id) item.quantity = valor;
             return item
         })
-        setCard(cartNuevo)
+        setCart(cartNuevo)
 
     }
     getProducts()
     return (
-        <CartContext.Provider value={{ addToCart, cart, getQuantity, getTotal, addInputCart }}>
+        <CartContext.Provider value={{ addToCart, cart, getQuantity, getTotal, addInputCart,setCart }}>
             {children}
         </CartContext.Provider>
     )

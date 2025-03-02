@@ -1,5 +1,5 @@
 import { app } from "./config";
-import { getFirestore, collection, getDocs, query, where, doc ,getDoc} from "firebase/firestore";
+import { getFirestore, collection, getDocs, query, where, doc ,getDoc,addDoc} from "firebase/firestore";
 
 
 const db = getFirestore(app);
@@ -34,6 +34,11 @@ export const getProductsId = async (id) => {
         console.log("No such document!");
     }
     return product
+}
+
+export const addTicket = async (datos)=>{
+    const docRef = await addDoc(collection(db, "ticket"), datos);
+        console.log("Document written with ID: ", docRef.id);
 }
 
 

@@ -1,14 +1,17 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { CartContext } from '../context/CartContext';
+import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router';
+import { addTicket } from '../firebase/db';
+
 
 const CheckoutForm = () => {
-    const { cart, getTotal } = useContext(CartContext);
+    const { cart, getTotal,setCart } = useContext(CartContext);
 
-
-    const [barra, setBarra] = useState(0);
+    const [barra, setBarra] = useState(0);//barra de carga form
     const [input, setInput] = useState({})
-    const [campos, setCampos] = useState({});
-
+    const [campos, setCampos] = useState({});//valores de los  inputs
+    const navigate = useNavigate();
 
     const precioTotal = getTotal();
 
@@ -29,13 +32,19 @@ const CheckoutForm = () => {
 
         if (verificado) {
             setCampos(datosForm);
-
-
         }
-
         else {
-            console.log(datosForm)
+            const datosGuardar = { ...datosForm, productos: cart, total: precioTotal}
+            Swal.fire({
+                title: "La compra fue exitosa " + datosForm.nombre,
+                text: "código de compra : 1234",
+                icon: "success",
+                draggable: true
+            });            
             setCampos(datosForm)
+            addTicket(datosGuardar);
+            setCart([]);
+            navigate("/");
         }
 
 
@@ -47,7 +56,7 @@ const CheckoutForm = () => {
 
     const handleChange = (e) => {
         const propiedad = e.target.id;
-        setInput((prev) => {
+        setCampos((prev) => {
             const form = { ...prev, [propiedad]: e.target.value }
             const formCount = Object.values(form).filter(Boolean).length;
             setBarra(formCount * 25);
@@ -70,11 +79,6 @@ const CheckoutForm = () => {
     }
 
 
-
-
-
-
-
     return (
         <div className='form-container'>
             <h1>Completar los siguientes datos</h1>
@@ -93,8 +97,8 @@ const CheckoutForm = () => {
 
                 <label htmlFor="">Teléfono</label>
                 <input onChange={handleChange} placeholder='+54113432323' type="text" id='telefono' />
-                {campos.telefono!=undefined? (campos.telefono == "" || campos.telefono.length < 5 || (isNaN(parseInt(campos.telefono)))
-                    ? <div style={{ color: "#ec7063" }}>ingrese un telefono valido</div> : <></>):<></> }
+                {campos.telefono != undefined ? (campos.telefono == "" || campos.telefono.length < 5 || (isNaN(parseInt(campos.telefono)))
+                    ? <div style={{ color: "#ec7063" }}>ingrese un telefono valido</div> : <></>) : <></>}
 
                 <label htmlFor="">Fecha de nacimiento</label>
                 <input onChange={handleChange} id='fecha' type="date" />
