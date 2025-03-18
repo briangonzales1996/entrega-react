@@ -80,13 +80,18 @@ header {
 
 .container-main>.categorias>.carrito-burbuja>i {
     font-size: 1.8rem;
+    
 }
 
 .container-main>.categorias>.carrito-burbuja>span {
     background-color: var(--color-font);
     padding: 3px;
     border-radius: 50%;
-
+    width: 25px;
+    display: inline-block;
+    text-align: center;
+    font-weight: 800;
+    animation: cartWidger 1s ease both;
 }
 
 
@@ -394,7 +399,7 @@ header {
 }
 
 .carrito-container>.carrito-products>.carrito-detalle>.carrito-detalle-name{
-    flex-grow: 2;
+    flex: 1;
     
 }
 /*detalle precio*/
@@ -404,7 +409,7 @@ header {
 
 
 .carrito-container>.carrito-products>.carrito-detalle>.carrito-detalle-precio{
-    flex-grow:1 ;
+   flex: 1;
     display: flex;
     justify-content: space-between;
     
@@ -428,7 +433,7 @@ header {
 
 .carrito-container>.carrito-products>section>.carrito-list-products>article>.list-product-name{
     display: flex;
-    flex-grow: 1;
+    flex:1;
     gap: 70px;
     align-items: center;
     max-width: 730px;/*mirar aquiiiiii*/
@@ -443,6 +448,7 @@ header {
 .carrito-container>.carrito-products>section>.carrito-list-products>article>.list-product-name>figure>img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .carrito-container>.carrito-products>section>.carrito-list-products>article>.list-product-name>h2{
@@ -453,7 +459,7 @@ header {
 /*preducto agragado: precio cantadidad*/
 .carrito-container>.carrito-products>section>.carrito-list-products>article>.list-product-precio{
     display: flex;
-    flex-grow: 1;
+    flex:1;
     justify-content: space-between;
     font-size: 1.3rem;
     align-items: center;
@@ -565,7 +571,7 @@ header {
 /*formulario*/
 .form-container{
     min-height: 550px;
-    background-color: var(--color-font);
+    background-color: #014e76;
     color: var(--color-feedback);
 }
 .form-container>h1{
@@ -586,10 +592,9 @@ header {
 }
 
 .form-container>form>.barra-container>.barra{
-    
-    
     min-height: 15px;
     transition: all 500ms ease;
+    border-radius: 5px;
 }
 /*
 .form-container>form>.barra-container>.barra1{
@@ -624,8 +629,8 @@ header {
 .form-container>form>input{
     padding:  7px 5px;
     font-size: 1.1rem;
-    
-    
+    border-radius: 7px;
+    border: none;
 }
 .form-container>form>input[type="date"]{
     max-width: 50%;
@@ -803,3 +808,17 @@ header {
     }
 }
 
+@keyframes cartWidger {
+    0%{
+        transform: translate(0px,-1px);
+    }
+    25%{
+        transform: translate(0);
+    }
+    50%{
+        transform:translate(0,1px);
+    }
+    75%{
+        transform:translate(0);
+    }
+}
