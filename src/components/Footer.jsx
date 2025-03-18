@@ -42,7 +42,7 @@ export const Footer = () => {
                         <p>Servicios</p>
                         <p>Help</p>
                         <p>About Us</p>
-                        <p>Documentación</p>
+                        <p>Document</p>
                         <p>Legal</p>
                     </div>
                 </div>
