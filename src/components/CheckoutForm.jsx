@@ -7,15 +7,11 @@ import { addTicket } from '../firebase/db';
 
 const CheckoutForm = () => {
     const { cart, getTotal,setCart } = useContext(CartContext);
-
     const [barra, setBarra] = useState(0);//barra de carga form
-    const [input, setInput] = useState({})
     const [campos, setCampos] = useState({});//valores de los  inputs
     const navigate = useNavigate();
 
     const precioTotal = getTotal();
-
-
     const getForm = (e) => {
         e.preventDefault();
         const valor = e.target
@@ -24,12 +20,8 @@ const CheckoutForm = () => {
             email: valor.email.value,
             telefono: valor.telefono.value,
             nacimiento: valor.fecha.value,
-
         }
-
         const verificado = verificarForm(datosForm);
-
-
         if (verificado) {
             setCampos(datosForm);
         }
@@ -46,12 +38,7 @@ const CheckoutForm = () => {
             setCart([]);
             navigate("/");
         }
-
-
-
     }
-
-
 
 
     const handleChange = (e) => {

@@ -43,6 +43,10 @@ export const CartProvider = ({ children }) => {
         return result
     }
 
+    const vaciarCart = () =>{
+        setCart([]);
+    } 
+
     const addInputCart = (e, id) => {
         let valor = e.target.value;
         valor = parseInt(valor)
@@ -55,7 +59,7 @@ export const CartProvider = ({ children }) => {
     }
     getProducts()
     return (
-        <CartContext.Provider value={{ addToCart, cart, getQuantity, getTotal, addInputCart,setCart }}>
+        <CartContext.Provider value={{ addToCart, cart, getQuantity, getTotal, addInputCart,setCart,vaciarCart }}>
             {children}
         </CartContext.Provider>
     )

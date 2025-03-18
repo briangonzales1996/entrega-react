@@ -35,7 +35,7 @@ export const getProductsId = async (id) => {
     }
     return product
 }
-
+//createOrder
 export const addTicket = async (datos)=>{
     const docRef = await addDoc(collection(db, "ticket"), datos);
         console.log("Document written with ID: ", docRef.id);

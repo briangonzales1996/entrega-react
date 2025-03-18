@@ -4,9 +4,9 @@ import { Link } from 'react-router'
 export const Item = ({ title,precio,descripcion,img,id }) => {
     
     return (
-
+ 
         <>
-            <article>
+            <article >
                 <div className="item-img">
                     <img loading="lazy" src={img} alt="" />
                 </div>

@@ -5,7 +5,7 @@ import { CartList } from './CartList';
 import { useNavigate } from 'react-router';
 
 export const CartContainer = () => {
-  const {cart,getTotal} = useContext(CartContext);
+  const {cart,getTotal,vaciarCart} = useContext(CartContext);
   const total = getTotal();
   const navigate = useNavigate()
 
@@ -38,6 +38,7 @@ export const CartContainer = () => {
             <p>${total}</p>
           </div>
           <button onClick={(e)=>navigate("/checkout")} >Comprar Todo</button>
+          <button onClick={(e)=>vaciarCart()} >Vaciar Todo</button>
         </div>
       }
       <div className='carrito-back'>
