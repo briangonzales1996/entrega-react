@@ -13,8 +13,10 @@
 
 header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.382), rgba(0, 0, 0, 0.366)), url(../public/assets/fondo.jpg);
+    background-size: cover;
+    
     padding: 10px 30px;
-
+    
 }
 
 .container-main {
@@ -157,7 +159,7 @@ header {
 
 
 
-/*List of products available*/
+/*Lista de productos*/
 .products-list {}
 
 .products-list>div {
@@ -210,7 +212,7 @@ header {
     object-fit: cover;
 }
 
-/*description del product*/
+/*descripcion del producto*/
 .products-list>div>.items-container>article>.item-description {
     padding: 0 10px;
 
@@ -224,7 +226,7 @@ header {
     font-size: .9rem;
 }
 
-/*precio of product*/
+/*precio del producto*/
 
 .products-list>div>.items-container>article>.item-precio {
     margin-top: 10px;
