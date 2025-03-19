@@ -4,13 +4,10 @@ import { useEffect } from 'react';
 import { useParams } from 'react-router';
 import { getProductsId } from '../firebase/db';
 
-
 export const ItemDetailContainer = () => {
-    
     const [productos,setProductos]= useState({})
     const [loading, setLoading] = useState(false);
     const parametro = useParams();
-
     useEffect(() => {
         obtenerProductos()
     }, [parametro.id])

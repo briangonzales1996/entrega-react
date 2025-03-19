@@ -31,14 +31,13 @@ export const Navbar = () => {
             <li><NavLink to="/category/movile">MOVILES</NavLink></li>
             <li><NavLink to="/category/notebook">NOTEBOOK</NavLink></li>
             <li><NavLink to="/category/accessory">ACCESSORIES</NavLink></li>
-
           </ul>
           <CartWidger cantidad='10'></CartWidger>
         </nav>
       </div>
       <section className="background-principal">
         <div>
-          <h3>Productos tecnologicos para tu hogar</h3>
+          <h3>Productos tecnológicos para tu hogar</h3>
           <h1>Tenemos descuentos y nuevas ofertas cada semana</h1>
           <button>proximamente</button>
         </div>

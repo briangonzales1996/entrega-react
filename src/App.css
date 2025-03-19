@@ -273,7 +273,7 @@ header {
     min-height: 400px;
 }
 
-/*ITEM styles------------*/
+/*productos individuales*/
 
 .item-container {
     background-color: #CCCFD7;
@@ -317,7 +317,7 @@ header {
 }
 
 
-/*precio of product*/
+/*precio de producto*/
 
 .item-container>.item-precio {
     margin-top: 10px;
@@ -422,8 +422,9 @@ header {
 }
 
 /*detalle precio*/
-.carrito-container>.carrito-products>.carrito-detalle>.carrito-detalle-precio>h3 {}
+.carrito-container>.carrito-products>.carrito-detalle>.carrito-detalle-precio>h3 {
 
+}
 
 .carrito-container>.carrito-products>.carrito-detalle>.carrito-detalle-precio {
     flex: 1;
@@ -437,8 +438,6 @@ header {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-
-
 }
 
 .carrito-container>.carrito-products>section>.carrito-list-products>article {
@@ -475,7 +474,7 @@ header {
 }
 
 
-/*preducto agragado: precio cantadidad*/
+/*preducto agregado: precio cantidad*/
 .carrito-container>.carrito-products>section>.carrito-list-products>article>.list-product-precio {
     display: flex;
     flex: 1;
@@ -494,8 +493,13 @@ header {
 /*carrito vacio estilos*/
 .carrito-container>.carrito-products>.carrito-vacio {
     text-align: center;
-    font-size: 1.3rem;
-    margin: 100px 0;
+    font-size: 1.6rem;
+    margin: 50px 0;
+    padding: 50px 0;
+    background-color: rgb(104, 7, 7);
+    color: wheat;
+    border-radius: 5px;
+    font-weight: 700;
 }
 
 
@@ -522,7 +526,9 @@ header {
     margin-bottom: 10px;
 }
 
-.carrito-container>.carrito-total-container>.carrito-subTotal>h2 {}
+.carrito-container>.carrito-total-container>.carrito-subTotal>h2 {
+
+}
 
 .carrito-container>.carrito-total-container>.carrito-subTotal>p {
     font-size: 1.3rem;
@@ -576,8 +582,6 @@ header {
 .carrito-container>.carrito-back>a {
     text-decoration: none;
     color: inherit;
-
-
 }
 
 .carrito-container>.carrito-back>a>h2 {
@@ -591,13 +595,13 @@ header {
 
 /*formulario*/
 .form-container {
-    min-height: 550px;
+    min-height: 500px;
     background-color: #014e76;
     color: var(--color-feedback);
+    padding: 50px 0;
 }
 
 .form-container>h1 {
-    padding-top: 30px;
     text-align: center;
     margin-bottom: 30px;
     font-family: var(--font-familia);
@@ -611,7 +615,9 @@ header {
     margin: auto;
 }
 
-.form-container>form>.barra-container {}
+.form-container>form>.barra-container{
+
+}
 
 .form-container>form>.barra-container>.barra {
     min-height: 15px;
@@ -619,29 +625,7 @@ header {
     border-radius: 5px;
 }
 
-/*
-.form-container>form>.barra-container>.barra1{
-    background-color: rgb(125, 191, 26);
-    min-height: 15px;
-    animation: formBarra1 1s linear both;
-}   
 
-.form-container>form>.barra-container>.barra2{
-    background-color: rgb(125, 191, 26);
-    min-height: 15px;
-    animation: formBarra2 1s linear both;
-}
-.form-container>form>.barra-container>.barra3{
-    background-color: rgb(125, 191, 26);
-    min-height: 15px;
-    animation: formBarra3 1s linear both;
-}
-.form-container>form>.barra-container>.barra4{
-    background-color: rgb(125, 191, 26);
-    min-height: 15px;
-    animation: formBarra4 1s linear both;
-}
-*/
 
 .form-container>form>label {
     margin-top: 18px;
@@ -672,11 +656,6 @@ header {
     background-color: rgb(104, 7, 7);
     color: var(--color-feedback);
 }
-
-
-
-
-
 
 
 
@@ -757,7 +736,6 @@ header {
 }
 
 @media screen and (max-width:820px) {
-    .container-main>.categorias {}
 
     .container-main>.categorias>ul {
         position: absolute;
@@ -802,7 +780,6 @@ header {
 
     .container-main>.categorias>ul>li {
         width: max-content;
-        /***.------------------------------------*/
     }
 
     .container-main>.desplegable {
@@ -830,7 +807,6 @@ header {
         flex: 1;
     }
 }
-
 
 
 @keyframes titulo {

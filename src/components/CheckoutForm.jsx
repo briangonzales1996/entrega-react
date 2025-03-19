@@ -7,7 +7,7 @@ import { Checkout } from './Checkout';
 
 
 const CheckoutForm = () => {
-    const { cart, getTotal, setCart } = useContext(CartContext);
+    const {cart, getTotal, setCart } = useContext(CartContext);
     const [barra, setBarra] = useState(0);//barra de carga form
     const [campos, setCampos] = useState({});//valores de los  inputs
     const navigate = useNavigate();
@@ -40,7 +40,6 @@ const CheckoutForm = () => {
         }
     }
 
-
     const handleChange = (e) => {
         const propiedad = e.target.id;
         setCampos((prev) => {
@@ -50,7 +49,6 @@ const CheckoutForm = () => {
             return form
         });
     }
-
     function verificarForm(datosForm) {
         let condicion = false
         const telefono = parseInt(datosForm.telefono);

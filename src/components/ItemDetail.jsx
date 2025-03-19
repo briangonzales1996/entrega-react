@@ -2,8 +2,6 @@ import { ItemCount } from './ItemCount'
 
 
 export const ItemDetail = ({ productos }) => {
-    
-
     return (
         <>
             <article className='item-container'>
@@ -18,7 +16,6 @@ export const ItemDetail = ({ productos }) => {
                     <p>Pr ${productos.price}</p>
                 </div>
                 <ItemCount producto={productos}></ItemCount>
-                
             </article>
             
         </>

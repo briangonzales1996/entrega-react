@@ -2,9 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 
 export const Item = ({ title,precio,descripcion,img,id }) => {
-    
     return (
- 
         <>
             <article >
                 <div className="item-img">

@@ -8,16 +8,13 @@ export const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
   const parametro = useParams();
   const [loading, setLoading] = useState(false);
-  
-  
-  
+
   useEffect(() => {
     obtenerProductos()
   }, [parametro.id])
   
 
   const obtenerProductos = async () => {
-    
     if(Object.keys(parametro).length >= 1){
       const datosProducts =  await getProductsCategory(parametro.id);
       setProductos(datosProducts);
@@ -25,16 +22,11 @@ export const ItemListContainer = () => {
     }
     else{
       const datosProducts = await getProducts();
-
       setProductos(datosProducts)
       setLoading(true);
       
     }  
   }
-
-
-
-
   return (
     <>
       {loading ? <ItemList products={productos} /> :

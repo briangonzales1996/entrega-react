@@ -11,7 +11,7 @@ export const CartContainer = () => {
 
   return (
     <div className='carrito-container'>
-      <h1>CARRITO DE PRODUCTOS</h1>
+      <h1>CARRITO DE PRODUCTOS AÑADIDOS</h1>
       <div className='carrito-products'>
         <div className='carrito-detalle'>
           <div className='carrito-detalle-name'>
@@ -24,7 +24,7 @@ export const CartContainer = () => {
           </div>
         </div>      
         <CartList cart ={cart}></CartList>
-        {cart.length === 0 && <div className='carrito-vacio'>SU CARRITO DE COMPRA ESTA VACIO</div>}
+        {cart.length === 0 && <div className='carrito-vacio'>SU CARRITO DE COMPRA ESTÁ VACÍO</div>}
       </div>
       {cart.length !== 0 &&
         <div className='carrito-total-container'>
