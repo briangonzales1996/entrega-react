@@ -2,16 +2,18 @@ import React from 'react'
 import { CartContext } from '../context/CartContext'
 import { useContext } from 'react'
 
-export const CartItem = ({item}) => {
-    const { addInputCart } = useContext(CartContext);
+export const CartItem = ({ item }) => {
+    const { addInputCart,handleClickDelete } = useContext(CartContext);
 
     const handleAddInput = (e, id) => {
         addInputCart(e, id)
     }
-
     return (
         <article key={item.id}>
             <div className='list-product-name'>
+                <div onClick={(e)=>handleClickDelete(e,item.id)} className='categorias__close' style={{cursor:'pointer'}}>
+                    <img src="../../public/assets/close.png" alt="cierre de menu" />
+                </div>
                 <figure>
                     <img src={item.image} alt="" />
                 </figure>

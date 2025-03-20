@@ -15,7 +15,6 @@ export const Navbar = () => {
     <header>
       <div className="container-main">
         <div onClick={handleClick} className='desplegable' >
-          
           <img src="../../public/assets/desplegable.png" alt="boton para desplegar menu" />
         </div>
         <div className="logo">

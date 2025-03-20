@@ -58,8 +58,13 @@ export const CartProvider = ({ children }) => {
 
     }
     getProducts()
+
+    function handleClickDelete (e,id){
+        const filtrado = [...cart].filter((item)=>item.id!==id);
+        setCart(filtrado);
+    }
     return (
-        <CartContext.Provider value={{ addToCart, cart, getQuantity, getTotal, addInputCart,setCart,vaciarCart }}>
+        <CartContext.Provider value={{ addToCart, cart, getQuantity, getTotal, addInputCart,setCart,vaciarCart,handleClickDelete }}>
             {children}
         </CartContext.Provider>
     )
