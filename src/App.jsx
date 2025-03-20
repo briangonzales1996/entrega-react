@@ -8,7 +8,6 @@ import { Footer } from './components/Footer';
 import { CartContainer } from './components/CartContainer';
 import CheckoutForm from './components/CheckoutForm';
 
-
 function App() {
   return (
     <>
@@ -27,5 +26,4 @@ function App() {
     </>
   )
 }
-
 export default App

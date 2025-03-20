@@ -1,8 +1,7 @@
 import React from 'react'
-import { useState } from 'react';
-import { useContext } from 'react'
-
+import { useState,useContext } from 'react';
 import { CartContext } from '../context/CartContext'
+
 export const ItemCount = ({ producto }) => {
   const [count, setCount] = useState(1);
   const { addToCart } = useContext(CartContext);

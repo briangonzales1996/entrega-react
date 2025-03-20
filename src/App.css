@@ -194,7 +194,7 @@ header {
     overflow: hidden;
     box-shadow: 1px 1px 1px 2px #d3d6dc;
     display: grid;
-    animation: opacidad 1s ease both; 
+    animation: opacidad 1s ease both;
 }
 
 .products-list>div>.items-container>article:hover {
@@ -382,13 +382,6 @@ header {
     transition: all .5s ease;
     cursor: pointer;
 }
-
-
-
-
-
-
-
 
 
 

@@ -1,6 +1,5 @@
 import { ItemCount } from './ItemCount'
 
-
 export const ItemDetail = ({ productos }) => {
     return (
         <>
@@ -17,7 +16,6 @@ export const ItemDetail = ({ productos }) => {
                 </div>
                 <ItemCount producto={productos}></ItemCount>
             </article>
-            
         </>
     )
 }

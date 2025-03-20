@@ -26,6 +26,5 @@ export const ItemDetailContainer = () => {
         <>
             {loading?<ItemDetail productos ={productos}></ItemDetail>:<div className='cargando'>CARGANDO</div>}
         </>
-        
     )
 }

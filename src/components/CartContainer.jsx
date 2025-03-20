@@ -5,10 +5,9 @@ import { CartList } from './CartList';
 import { useNavigate } from 'react-router';
 
 export const CartContainer = () => {
-  const {cart,getTotal,vaciarCart} = useContext(CartContext);
+  const { cart, getTotal, vaciarCart } = useContext(CartContext);
   const total = getTotal();
   const navigate = useNavigate()
-
   return (
     <div className='carrito-container'>
       <h1>CARRITO DE PRODUCTOS AÑADIDOS</h1>
@@ -22,8 +21,8 @@ export const CartContainer = () => {
             <h3>Cantidad</h3>
             <h3>SubTotal</h3>
           </div>
-        </div>      
-        <CartList cart ={cart}></CartList>
+        </div>
+        <CartList cart={cart}></CartList>
         {cart.length === 0 && <div className='carrito-vacio'>SU CARRITO DE COMPRA ESTÁ VACÍO</div>}
       </div>
       {cart.length !== 0 &&
@@ -37,13 +36,13 @@ export const CartContainer = () => {
             <h2>Total</h2>
             <p>${total}</p>
           </div>
-          <button onClick={(e)=>navigate("/checkout")} >Comprar Todo</button>
-          <button onClick={(e)=>vaciarCart()} >Vaciar Todo</button>
+          <button onClick={(e) => navigate("/checkout")} >Comprar Todo</button>
+          <button onClick={(e) => vaciarCart()} >Vaciar Todo</button>
         </div>
       }
       <div className='carrito-back'>
         <Link to={'/'}>
-          <h2 onClick={(e)=>navigate("/")}>VOLVER A LISTA DE PRODUCTOS</h2>
+          <h2 onClick={(e) => navigate("/")}>VOLVER A LISTA DE PRODUCTOS</h2>
         </Link>
       </div>
     </div>

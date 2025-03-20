@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router'
 
-export const Item = ({ title,precio,descripcion,img,id,visible }) => {
-    
+export const Item = ({ title, precio, descripcion, img, id }) => {
     return (
         <>
             <article >
@@ -15,11 +14,10 @@ export const Item = ({ title,precio,descripcion,img,id,visible }) => {
                 </div>
                 <div className="item-precio">
                     <p>Pr ${precio}</p>
-                    <Link to={"/product/"+id}><button>BUY</button></Link>
+                    <Link to={"/product/" + id}><button>BUY</button></Link>
                 </div>
             </article>
         </>
-
     )
 
 }

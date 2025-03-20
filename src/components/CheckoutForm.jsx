@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router';
 import { addTicket } from '../firebase/db';
 import { Checkout } from './Checkout';
 
-
 const CheckoutForm = () => {
     const {cart, getTotal, setCart } = useContext(CartContext);
     const [barra, setBarra] = useState(0);//barra de carga form
@@ -39,7 +38,6 @@ const CheckoutForm = () => {
             });
         }
     }
-
     const handleChange = (e) => {
         const propiedad = e.target.id;
         setCampos((prev) => {

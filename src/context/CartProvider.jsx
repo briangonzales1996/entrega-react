@@ -4,7 +4,6 @@ import { getProducts } from "../firebase/db";
 
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
-
     function verificarProductoExistente(producto) {
         const ids = [...cart].map((product) => product.id);
         const condicion = ids.includes(producto.id)
