@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { ItemList } from './ItemList';
 import { useParams } from 'react-router';
-import { CartContext } from '../context/CartContext';
 import { getProducts, getProductsCategory } from '../firebase/db';
 export const ItemListContainer = () => {
 

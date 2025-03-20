@@ -1,4 +1,6 @@
-#root {}
+#root {
+    box-sizing: border-box;
+}
 
 * {
     margin: 0;
@@ -14,9 +16,9 @@
 header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.382), rgba(0, 0, 0, 0.366)), url(../public/assets/fondo.jpg);
     background-size: cover;
-    
+
     padding: 10px 30px;
-    
+
 }
 
 .container-main {
@@ -186,16 +188,19 @@ header {
     background-color: #CCCFD7;
     color: var(--color-font);
     padding-bottom: 20px;
-    transition: transform .5s ease;
+    transition: all .5s ease;
     cursor: pointer;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 1px 1px 1px 2px #d3d6dc;
     display: grid;
+    animation: opacidad 1s ease both; 
 }
 
 .products-list>div>.items-container>article:hover {
     transform: scale(1.1);
+    border: rgb(134, 132, 132) 1px solid;
+    box-shadow: none;
 }
 
 .products-list>div>.items-container>article>.item-img {
@@ -422,9 +427,7 @@ header {
 }
 
 /*detalle precio*/
-.carrito-container>.carrito-products>.carrito-detalle>.carrito-detalle-precio>h3 {
-
-}
+.carrito-container>.carrito-products>.carrito-detalle>.carrito-detalle-precio>h3 {}
 
 .carrito-container>.carrito-products>.carrito-detalle>.carrito-detalle-precio {
     flex: 1;
@@ -526,9 +529,7 @@ header {
     margin-bottom: 10px;
 }
 
-.carrito-container>.carrito-total-container>.carrito-subTotal>h2 {
-
-}
+.carrito-container>.carrito-total-container>.carrito-subTotal>h2 {}
 
 .carrito-container>.carrito-total-container>.carrito-subTotal>p {
     font-size: 1.3rem;
@@ -615,9 +616,7 @@ header {
     margin: auto;
 }
 
-.form-container>form>.barra-container{
-
-}
+.form-container>form>.barra-container {}
 
 .form-container>form>.barra-container>.barra {
     min-height: 15px;
@@ -845,6 +844,7 @@ header {
     from {
         width: 25%;
     }
+
     to {
         width: 50%;
     }
@@ -855,6 +855,7 @@ header {
     from {
         width: 50%;
     }
+
     to {
         width: 75%;
     }
@@ -885,5 +886,15 @@ header {
 
     75% {
         transform: translate(0);
+    }
+}
+
+@keyframes opacidad {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }

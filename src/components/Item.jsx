@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router'
 
-export const Item = ({ title,precio,descripcion,img,id }) => {
+export const Item = ({ title,precio,descripcion,img,id,visible }) => {
+    
     return (
         <>
             <article >
@@ -10,7 +11,7 @@ export const Item = ({ title,precio,descripcion,img,id }) => {
                 </div>
                 <div className="item-description">
                     <h3>Producto {title}</h3>
-                    <p>{"Añadir texto ahora"}</p>
+                    <p>{descripcion}</p>
                 </div>
                 <div className="item-precio">
                     <p>Pr ${precio}</p>
