@@ -1,6 +1,7 @@
 import React from 'react'
 
 export const Footer = () => {
+    const base_path = import.meta.env.BASE_URL;
     return (
         <footer className="footer">
             <div>
@@ -56,7 +57,7 @@ export const Footer = () => {
                     </div>
                 </div>
                 <div className="footer-logo">
-                    <img src="/assets/logo.png" alt="logo de windows" />
+                    <img src="assets/logo.png" alt="logo de windows" />
                 </div>
             </div>
         </footer>

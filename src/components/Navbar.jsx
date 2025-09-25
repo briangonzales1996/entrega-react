@@ -20,12 +20,12 @@ export const Navbar = () => {
           <img src={`${base_path}assets/desplegable.png`} alt="boton para desplegar menu" />
         </div>
         <div className="logo">
-          <NavLink to={"/"}><img src="public/assets/logo.png" alt="logo de windows" /></NavLink>
+          <NavLink to={"/"}><img src={base_path+"assets/logo.png"} alt="logo de windows" /></NavLink>
         </div>
         <nav className="categorias">
           <ul className={`${height?"":"animation"}`}>
             <div onClick={handleClickClose} className='categorias__close'>
-              <img src="/assets/close.png" alt="cierre de menu" />
+              <img src={base_path+"assets/close.png"} alt="cierre de menu" />
             </div>
             <li><NavLink to="/category/pc">PC</NavLink></li>
             <li><NavLink to="/category/tablet">TABLETS</NavLink></li>
