@@ -15,15 +15,15 @@ export const Navbar = () => {
     <header>
       <div className="container-main">
         <div onClick={handleClick} className='desplegable' >
-          <img src="../../public/assets/desplegable.png" alt="boton para desplegar menu" />
+          <img src="/assets/desplegable.png" alt="boton para desplegar menu" />
         </div>
         <div className="logo">
-          <NavLink to={"/"}><img src="../public/assets/logo.png" alt="logo de windows" /></NavLink>
+          <NavLink to={"/"}><img src="/assets/logo.png" alt="logo de windows" /></NavLink>
         </div>
         <nav className="categorias">
           <ul className={`${height?"":"animation"}`}>
             <div onClick={handleClickClose} className='categorias__close'>
-              <img src="../../public/assets/close.png" alt="cierre de menu" />
+              <img src="/assets/close.png" alt="cierre de menu" />
             </div>
             <li><NavLink to="/category/pc">PC</NavLink></li>
             <li><NavLink to="/category/tablet">TABLETS</NavLink></li>

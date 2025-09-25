@@ -56,7 +56,7 @@ export const Footer = () => {
                     </div>
                 </div>
                 <div className="footer-logo">
-                    <img src="../public/assets/logo.png" alt="logo de windows" />
+                    <img src="/assets/logo.png" alt="logo de windows" />
                 </div>
             </div>
         </footer>
