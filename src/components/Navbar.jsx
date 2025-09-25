@@ -3,6 +3,8 @@ import { CartWidger } from './CartWidger'
 import { NavLink } from 'react-router'
 
 export const Navbar = () => {
+
+  const base_path = import.meta.env.BASE_URL;
   const [height,setHeight] = useState(true)
   const handleClick =() =>{
     setHeight(!height)
@@ -15,10 +17,10 @@ export const Navbar = () => {
     <header>
       <div className="container-main">
         <div onClick={handleClick} className='desplegable' >
-          <img src="/assets/desplegable.png" alt="boton para desplegar menu" />
+          <img src={`${base_path}assets/desplegable.png`} alt="boton para desplegar menu" />
         </div>
         <div className="logo">
-          <NavLink to={"/"}><img src="/assets/logo.png" alt="logo de windows" /></NavLink>
+          <NavLink to={"/"}><img src="public/assets/logo.png" alt="logo de windows" /></NavLink>
         </div>
         <nav className="categorias">
           <ul className={`${height?"":"animation"}`}>
