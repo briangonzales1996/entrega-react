@@ -1,8 +1,27 @@
-# React + Vite
+# 🛒 E-Commerce React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación de comercio electrónico construida con **React**. Permite al usuario ver una lista de productos, agregarlos al carrito y generar un ticket o comprobante de compra.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologías utilizadas
+
+- ⚛️ **React**  
+- 🔥 **Firebase** (Base de datos de productos)  
+- 💥 **SweetAlert** (Alertas visuales elegantes)  
+- 🧠 **Hooks React: `useState` y `useEffect`**
+
+---
+
+## 📦 Características del proyecto
+
+- 📋 Listado de productos (obtenidos desde Firebase)
+- 🛍 Carrito de compras funcional
+- 📄 Generación de ticket o comprobante de compra
+- ✅ Alertas personalizadas con SweetAlert
+- 🎯 Interfaz sencilla e intuitiva
+
+---
+
+## 📁 Estructura del proyecto
+
